@@ -140,7 +140,7 @@ def generate_folder_name(gist: Gist) -> str:
         str: A human-readable folder name.
     """
     # Format the creation date
-    date_part = format_date(gist.created_at)
+    date_part = format_date(gist.created_at, "YYYYMMDD")
     
     # Sanitize and concatenate all filenames
     filenames_part = '_'.join(sanitise_folder_name(filename) for filename in gist.files.keys())
@@ -148,7 +148,7 @@ def generate_folder_name(gist: Gist) -> str:
     # Combine date, -gist-, and filenames
     return f"{date_part}-{filenames_part}-gist"
 
-def save_gist_files(gist: Gist, folder_name: str) -> str:
+def save_gist_files(gist: Gist, folder_name: str = None) -> str:
     """
     Save the files of a Gist to the local file system.
 
