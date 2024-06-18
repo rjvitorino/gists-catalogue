@@ -12,12 +12,12 @@ These gists are automatically fetched and updated using **Github Actions** and c
 
 ## Gists
 
-### [Gist no. 1](gists/2024-06-17-sort_vowels-gist/index.md)
+### [Gist no. 1](gists/2024-06-03-only_evens-gist/index.md)
 
-* **Description**: Cassidoo's interview question of the week: a function that takes a list of names and returns the names sorted by the number of vowels in each name in descending order. If two names have the same number of vowels, sort them alphabetically.
+* **Description**: Cassidoo's interview question of the week: a function that takes an array of integers and returns a new array containing only the even numbers, and sorted.
 * **Language**: Python
-* **Created at**: 2024-06-17
-* **Last updated at**: 2024-06-17
+* **Created at**: 2024-06-03
+* **Last updated at**: 2024-06-07
 
 ### [Gist no. 2](gists/2024-06-10-four_sum-gist/index.md)
 
@@ -26,9 +26,9 @@ These gists are automatically fetched and updated using **Github Actions** and c
 * **Created at**: 2024-06-10
 * **Last updated at**: 2024-06-10
 
-### [Gist no. 3](gists/2024-06-03-only_evens-gist/index.md)
+### [Gist no. 3](gists/2024-06-17-sort_vowels-gist/index.md)
 
-* **Description**: Cassidoo's interview question of the week: a function that takes an array of integers and returns a new array containing only the even numbers, and sorted.
+* **Description**: Cassidoo's interview question of the week: a function that takes a list of names and returns the names sorted by the number of vowels in each name in descending order. If two names have the same number of vowels, sort them alphabetically.
 * **Language**: Python
-* **Created at**: 2024-06-03
-* **Last updated at**: 2024-06-07
+* **Created at**: 2024-06-17
+* **Last updated at**: 2024-06-17
