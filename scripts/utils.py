@@ -33,13 +33,14 @@ GIST_FORMAT = """
 README = """
 # GistMaster
 
-Welcome to my Gists catalogue! This repository is automatically updated and organised, to provide a structured and visually appealing way to browse and understand them.
+Welcome to my Gists catalogue!
+This repository is automatically updated and organised, to provide a structured and visually appealing way to browse and understand them.
 
 ## About
 
-I am @{github_username}, and my open-source contributions are available on my [Github profile]({github_url}).
-In this repository, you will find solutions to various interview questions, coding challenges, snippets and scripts I have created.
-These gists are fetched and updated automatically using Github Actions.
+I'm **[@{github_username}]({github_url})**, and my open-source contributions are available on my **[Github profile]({github_url})**.
+In this repository, you will find solutions to various interview questions, coding challenges, random snippets and scripts I've created.
+These gists are automatically fetched and updated using **Github Actions** and can be set in your profile as well.
 
 ## Gists
 
