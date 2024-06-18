@@ -25,6 +25,10 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.pip
+          
+      - name: Run Tests
+        run: |
+          pytest
 
       - name: Run Update Script
         env:

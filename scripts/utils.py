@@ -4,8 +4,15 @@ import re
 from datetime import datetime
 from pathlib import Path
 from typing import List
+
 import requests
-from gist import Gist
+
+try:
+    # Import for normal execution
+    from scripts.gist import Gist
+except ImportError:
+    # Import for testing context
+    from gist import Gist
 
 # Setup logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
