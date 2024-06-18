@@ -9,3 +9,25 @@ I am @rjvitorino, and my open-source contributions are available on my [Github p
 In this repository, you will find solutions to various interview questions, coding challenges, snippets and scripts I have created.
 These gists are fetched and updated automatically using Github Actions.
 
+## Gists
+
+### [Gist no. 1](gists/2024-06-17-sort_vowels-gist/index.md)
+
+* **Description**: Cassidoo's interview question of the week: a function that takes a list of names and returns the names sorted by the number of vowels in each name in descending order. If two names have the same number of vowels, sort them alphabetically.
+* **Language**: Python
+* **Created at**: 2024-06-17
+* **Last updated at**: 2024-06-17
+
+### [Gist no. 2](gists/2024-06-10-four_sum-gist/index.md)
+
+* **Description**: Cassidoo's interview question of the week: a function that takes an array of integers and a target sum, and returns all unique quadruplets [a, b, c, d] in the array such that a + b + c + d = target
+* **Language**: Python
+* **Created at**: 2024-06-10
+* **Last updated at**: 2024-06-10
+
+### [Gist no. 3](gists/2024-06-03-only_evens-gist/index.md)
+
+* **Description**: Cassidoo's interview question of the week: a function that takes an array of integers and returns a new array containing only the even numbers, and sorted.
+* **Language**: Python
+* **Created at**: 2024-06-03
+* **Last updated at**: 2024-06-07
