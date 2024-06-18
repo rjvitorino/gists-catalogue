@@ -49,6 +49,41 @@ I'm **[@{github_username}]({github_url})**, and my open-source contributions are
 In this repository, you will find solutions to various interview questions, coding challenges, random snippets and scripts I've created.
 These gists are automatically fetched and updated using **Github Actions** and can be set in your profile as well.
 
+## Installation and Setup
+
+To run this repository on your own GitHub profile, please fork it and follow these steps:
+
+1. **Clone the Repository**:
+    ```bash
+    git clone https://github.com/YOUR-USERNAME/gists-catalogue.git
+    cd gists-catalogue
+    ```
+
+2. **Set Up a Virtual Environment**:
+    ```bash
+    python3 -m venv gists-venv
+    source gists-venv/bin/activate  # On Windows, use `gists-venv\Scripts\activate`
+    ```
+
+3. **Install Dependencies**:
+    ```bash
+    pip install -r scripts/requirements.pip
+    ```
+
+4. **Set Environment Variables**:
+    - `GITHUB_USERNAME`: Your GitHub username.
+    - `GISTMASTER_TOKEN`: Your personal access token with access to your gists.
+
+5. **Run the Update Script**:
+    ```bash
+    python scripts/update_gists.py
+    ```
+
+6. **Set Up GitHub Actions**:
+    - Ensure you have a `.github/workflows/update_gists.yml` file.
+    - Update the file to include your repository and branch details.
+
+
 ## Gists
 
 """
