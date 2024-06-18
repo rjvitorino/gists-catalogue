@@ -14,11 +14,20 @@ def main() -> None:
     Main function to fetch the Gists from Github API, update the local files, and update the README.
     """
     try:
+        logging.info("Fetching gists...")
         gists = fetch_gists()
+
+        logging.info("Creating gists directories and files...")
         for gist in gists:
             folder_name = create_gist_index(gist)
             save_gist_files(gist, folder_name)
+            logging.info(f"Processed gist: {folder_name}")
+        
+        logging.info("Updating README...")    
         update_readme(gists)
+        
+        logging.info("Gists update complete.")
+
     except HTTPError as http_error:
         logging.error(f"HTTP error occurred: {http_error}")
     except Exception as error:
