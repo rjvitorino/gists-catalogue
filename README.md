@@ -1,46 +1,50 @@
 
 # GistMaster
 
-Welcome to my Gists catalogue!
+Welcome to **GistMaster**, my **Gists catalogue**!
 This repository is automatically updated and organised, to provide a structured and visually appealing way to browse and understand them.
 
 ## About
 
 I'm **[@rjvitorino](https://github.com/rjvitorino)**, and my open-source contributions are available on my **[Github profile](https://github.com/rjvitorino)**.
 In this repository, you will find solutions to various interview questions, coding challenges, random snippets and scripts I've created.
-These gists are automatically fetched and updated using **Github Actions** and can be set in your profile as well.
+These gists are automatically fetched and updated using **Github Actions** and can be set in your profile as well. 
+
+👉 **[Check out my Gists below](#gists)** to see my work and explore the code samples.
 
 ## Installation and Setup
 
-To run this repository on your own GitHub profile, please fork it and follow these steps:
+To run this repository on your own GitHub profile, please [fork it](https://github.com/rjvitorino/gists-catalogue/fork) and follow these steps:
 
-1. **Clone the Repository**:
+1. **Clone the repository**:
     ```bash
     git clone https://github.com/YOUR-USERNAME/gists-catalogue.git
     cd gists-catalogue
     ```
 
-2. **Set Up a Virtual Environment**:
+2. **Set up a virtual environment**:
     ```bash
     python3 -m venv gists-venv
     source gists-venv/bin/activate  # On Windows, use `gists-venv\Scriptsctivate`
     ```
 
-3. **Install Dependencies**:
+3. **Install dependencies**:
     ```bash
     pip install -r scripts/requirements.pip
     ```
 
-4. **Set Environment Variables**:
+4. **Set environment variables**:
     - `GITHUB_USERNAME`: Your GitHub username.
     - `GISTMASTER_TOKEN`: Your personal access token with access to your gists.
 
-5. **Run the Update Script**:
+5. **Run the tests, and if they are good, then the update script**:
     ```bash
-    python scripts/update_gists.py
+    pytest
+    # If the tests run succesfully you can try to run the script
+    python3 scripts/update_gists.py
     ```
 
-6. **Set Up GitHub Actions**:
+6. **Set up GitHub Actions**:
     - Ensure you have a `.github/workflows/update_gists.yml` file.
     - Update the file to include your repository and branch details.
 
