@@ -25,7 +25,7 @@ To run this repository on your own GitHub profile, please [fork it](https://gith
 2. **Set up a virtual environment**:
     ```bash
     python3 -m venv gists-venv
-    source gists-venv/bin/activate  # On Windows, use `gists-venv\Scriptsctivate`
+    source gists-venv/bin/activate  # On Windows, use `gists-venv\Scripts\activate`
     ```
 
 3. **Install dependencies**:
@@ -35,12 +35,12 @@ To run this repository on your own GitHub profile, please [fork it](https://gith
 
 4. **Set environment variables**:
     - `GITHUB_USERNAME`: Your GitHub username.
-    - `GISTMASTER_TOKEN`: Your personal access token with access to your gists.
+    - `GISTMASTER_TOKEN`: Your personal access token with access to your gists (you will need to set one up in Github).
 
 5. **Run the tests, and if they are good, then the update script**:
     ```bash
     pytest
-    # If the tests run succesfully you can try to run the script
+    # If the tests run succesfully you can then run the script
     python3 scripts/update_gists.py
     ```
 
