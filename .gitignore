@@ -166,8 +166,5 @@ cython_debug/
 *.tmp
 tmp/
 
-# Ignore generated gists directory
-gists/
-
 # Ignore .ruff_cache
 .ruff_cache/
