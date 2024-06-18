@@ -17,14 +17,17 @@ def main() -> None:
         logging.info("Fetching gists...")
         gists = fetch_gists()
 
+        logging.info("Sorting gists by creation date...")
+        sorted_gists = sorted(gists, key=lambda gist: gist.created_at)
+
         logging.info("Creating gists directories and files...")
-        for gist in gists:
+        for gist in sorted_gists:
             folder_name = create_gist_index(gist)
             save_gist_files(gist, folder_name)
             logging.info(f"Processed gist: {folder_name}")
         
         logging.info("Updating README...")    
-        update_readme(gists)
+        update_readme(sorted_gists)
         
         logging.info("Gists update complete.")
 
