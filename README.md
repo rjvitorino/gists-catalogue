@@ -71,3 +71,10 @@ To run this repository on your own GitHub profile, please [fork it](https://gith
 * **Language**: Python
 * **Created at**: 2024-06-17
 * **Last updated at**: 2024-06-17
+
+### [Gist no. 4](gists/20240619-unique_sum-gist/index.md)
+
+* **Description**: Cassidy's interview question of the week (20240401 - April fools!): Given an array of numbers, add all of the values together but only if the number does not repeat a digit.
+* **Language**: Python
+* **Created at**: 2024-06-19
+* **Last updated at**: 2024-06-19
