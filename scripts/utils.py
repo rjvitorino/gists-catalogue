@@ -40,7 +40,10 @@ GIST_FORMAT = """
 README = r"""
 # GistMaster
 
-Welcome to **GistMaster**, my **Gists catalogue**!
+![GistMaster, a catalogue for your gists](gistmaster.png)
+
+Welcome to **GistMaster**, the catalogue of my **Github Gists**!
+
 This repository is automatically updated and organised, to provide a structured and visually appealing way to browse and understand them.
 
 ## About
@@ -51,47 +54,25 @@ These gists are automatically fetched and updated using **Github Actions** and c
 
 👉 **[Check out my Gists below](#gists)** to see my work and explore the code samples.
 
-## Installation and Setup
+## Quick Start
 
-To run this repository on your own GitHub profile, please [fork it]({github_url}/gists-catalogue/fork) and follow these steps:
+For detailed installation and setup instructions, please refer to the [Installation Guide](docs/SETUP.md).
 
-1. **Clone the repository**:
-    ```bash
-    git clone https://github.com/YOUR-USERNAME/gists-catalogue.git
-    cd gists-catalogue
-    ```
+## Contributing
 
-2. **Set up a virtual environment**:
-    ```bash
-    python3 -m venv gists-venv
-    source gists-venv/bin/activate  # On Windows, use `gists-venv\Scripts\activate`
-    ```
+Contributions are more than welcome! Please read the [contributing guidelines](docs/CONTRIBUTING.md) and [code of conduct](docs/CODE_OF_CONDUCT.md).
 
-3. **Install dependencies**:
-    ```bash
-    pip install -r scripts/requirements.pip
-    ```
+## License
 
-4. **Set environment variables**:
-    - `GITHUB_USERNAME`: Your GitHub username.
-    - `GISTMASTER_TOKEN`: Your personal access token with access to your gists (you will need to set one up in Github).
+This project is licensed under the terms of the [GPL-3.0 license](LICENSE).
 
-5. **Run the tests, and if they are good, then the update script**:
-    ```bash
-    pytest
-    # If the tests run succesfully you can then run the script
-    python3 scripts/update_gists.py
-    ```
+## Contact
 
-6. **Set up GitHub Actions**:
-    - Ensure you have a `.github/workflows/update_gists.yml` file.
-    - Update the file to include your repository and branch details.
-
+For any questions, feel free to contact me via my [GitHub profile]({github_url}).
 
 ## Gists
 
 """
-
 
 # Functions that use Github API to fetch its data
 
