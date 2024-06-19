@@ -1,6 +1,6 @@
 # 20240619-unique_sum-gist
 
-**Description**: Cassidy's interview question of the week (20240401 - April fools!): Given an array of numbers, add all of the values together but only if the number does not repeat a digit.
+**Description**: Cassidoo's interview question of the week (20240401 - April fools!): Given an array of numbers, add all of the values together but only if the number does not repeat a digit.
 
 ## unique_sum.py
 
