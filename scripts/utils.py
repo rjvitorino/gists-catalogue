@@ -48,7 +48,7 @@ This repository is automatically updated and organised, to provide a structured 
 
 ## About
 
-I'm **[@{github_username}]({github_url})**, and my open-source contributions are available on my **[Github profile]({github_url})**.
+👋 I'm **[@{github_username}]({github_url})**, and my open-source contributions are available on my **[Github profile]({github_url})**.
 In this repository, you will find solutions to various interview questions, coding challenges, random snippets and scripts I've created.
 These gists are automatically fetched and updated using **Github Actions** and can be set in your profile as well. 
 
@@ -56,19 +56,19 @@ These gists are automatically fetched and updated using **Github Actions** and c
 
 ## Quick Start
 
-For detailed installation and setup instructions, please refer to the [Installation Guide](docs/SETUP.md).
+🚀 For detailed installation and setup instructions, please refer to the [Installation Guide](docs/SETUP.md).
 
 ## Contributing
 
-Contributions are more than welcome! Please read the [contributing guidelines](docs/CONTRIBUTING.md) and [code of conduct](docs/CODE_OF_CONDUCT.md).
+🤝 Contributions are more than welcome! Please read the [Contributing Guidelines](docs/CONTRIBUTING.md) and [Code of Conduct](docs/CODE_OF_CONDUCT.md).
 
 ## License
 
-This project is licensed under the terms of the [GPL-3.0 license](LICENSE).
+📜 This project is licensed under the terms of the [GPL-3.0 license](LICENSE).
 
 ## Contact
 
-For any questions, feel free to contact me via my [GitHub profile]({github_url}).
+📧 For any questions, feel free to contact me via my [GitHub profile]({github_url}).
 
 ## Gists
 
