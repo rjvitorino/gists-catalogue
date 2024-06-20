@@ -1,7 +1,7 @@
 
 # GistMaster
 
-![GistMaster, a catalogue for your gists](gistmaster.png)
+![GistMaster, a catalogue for your gists](docs/gistmaster.png)
 
 Welcome to **GistMaster**, the catalogue of my **Github Gists**!
 
