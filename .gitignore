@@ -168,3 +168,6 @@ tmp/
 
 # Ignore .ruff_cache
 .ruff_cache/
+
+# Ignore .DS_Store
+.DS_Store
