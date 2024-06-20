@@ -50,6 +50,15 @@ Welcome to **GistMaster**, the self-updatable catalogue for **Github Gists**!
 
 This repository is automatically updated and organised, to provide a structured and visually appealing way to browse and understand them.
 
+## Table of Contents
+
+- [About](#about)
+- [Quick Start](#quick-start)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Gists](#gists)
+
 ## About
 
 👋 I'm **[@{github_username}]({github_url})**, and my open-source contributions are available on my **[Github profile]({github_url})**.
