@@ -3,9 +3,22 @@
 
 ![GistMaster, a catalogue for your gists](docs/gistmaster.png)
 
-Welcome to **GistMaster**, the catalogue of my **Github Gists**!
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/rjvitorino/gists-catalogue/update_gists.yml?branch=main)
+![Coverage Status](https://coveralls.io/repos/github/rjvitorino/gists-catalogue/badge.svg?branch=main)
+![License](https://img.shields.io/github/license/rjvitorino/gists-catalogue)
+
+Welcome to **GistMaster**, the self-updatable catalogue for **Github Gists**!
 
 This repository is automatically updated and organised, to provide a structured and visually appealing way to browse and understand them.
+
+## Table of Contents
+
+- [About](#about)
+- [Quick Start](#quick-start)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Gists](#gists)
 
 ## About
 
