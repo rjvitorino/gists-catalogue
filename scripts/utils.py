@@ -42,7 +42,11 @@ README = r"""
 
 ![GistMaster, a catalogue for your gists](docs/gistmaster.png)
 
-Welcome to **GistMaster**, the catalogue of my **Github Gists**!
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/{github_username}/gists-catalogue/update_gists.yml?branch=main)
+![Coverage Status](https://coveralls.io/repos/github/{github_username}/gists-catalogue/badge.svg?branch=main)
+![License](https://img.shields.io/github/license/{github_username}/gists-catalogue)
+
+Welcome to **GistMaster**, the self-updatable catalogue for **Github Gists**!
 
 This repository is automatically updated and organised, to provide a structured and visually appealing way to browse and understand them.
 
