@@ -19,7 +19,7 @@ To run this repository on your own GitHub profile, please [fork it](https://gith
 3. **Install dependencies**:
 
     ```bash
-    pip install -r scripts/requirements.pip
+    pip install -r requirements.txt
     ```
 
 4. **Set environment variables**:
