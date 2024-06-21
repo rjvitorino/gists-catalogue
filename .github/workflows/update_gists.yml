@@ -38,6 +38,16 @@ jobs:
         run: |
           pytest
 
+      - name: Run cProfile
+        run: |
+          python scripts/profile_gists.py
+    
+      - name: Upload profiling results
+        uses: actions/upload-artifact@v3
+        with:
+          name: profiling-results
+          path: restats
+
       - name: Run Update Script
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -46,6 +56,9 @@ jobs:
           python scripts/update_gists.py
 
       - name: Commit and Push Changes
+        if: github.repository != 'local-testing'  # Ensure this step is skipped for local testing
+        env:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'

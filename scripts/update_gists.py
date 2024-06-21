@@ -1,9 +1,19 @@
 import logging
 from requests import HTTPError
-from utils import fetch_gists
-from utils import create_gist_index
-from utils import save_gist_files
-from utils import update_readme
+
+
+try:
+    # Import for normal execution
+    from utils import fetch_gists
+    from utils import create_gist_index
+    from utils import save_gist_files
+    from utils import update_readme
+except ImportError:
+    # Import for testing context
+    from scripts.utils import fetch_gists
+    from scripts.utils import create_gist_index
+    from scripts.utils import save_gist_files
+    from scripts.utils import update_readme
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, filename='gist_catalogue.log', 
