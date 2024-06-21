@@ -40,13 +40,13 @@ jobs:
 
       - name: Run cProfile
         run: |
-          python scripts/profile_gists.py
+          python tests/profile_gists.py
     
       - name: Upload profiling results
         uses: actions/upload-artifact@v3
         with:
           name: profiling-results
-          path: restats
+          path: tests/restats
 
       - name: Run Update Script
         env:
