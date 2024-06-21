@@ -1,4 +1,5 @@
 import cProfile
+import logging
 import pstats
 import sys
 from pathlib import Path
@@ -12,10 +13,16 @@ from pathlib import Path
 repo_root = Path(__file__).parent.parent
 sys.path.append(str(repo_root))
 
-from scripts.update_gists import main
+# Ruff: please ignore the following import error
+from scripts.update_gists import main   # noqa: E402
+
+# Setup logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def profile():
     """Profiles the main function and saves the results to 'restats'."""
+    main_function = f'{main.__module__}.{main.__name__}()'
+    logging.info(msg=f'Starting the profiling of the function {main_function}')
     cProfile.run('main()', 'tests/restats')
 
 if __name__ == '__main__':
