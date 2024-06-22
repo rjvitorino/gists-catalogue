@@ -40,15 +40,20 @@ GIST_FORMAT = """
 README = r"""
 # GistMaster
 
-![GistMaster, a catalogue for your gists](docs/gistmaster.png)
-
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/{github_username}/gists-catalogue/update_gists.yml?branch=main)
 ![Coverage Status](https://coveralls.io/repos/github/{github_username}/gists-catalogue/badge.svg?branch=main)
 ![License](https://img.shields.io/github/license/{github_username}/gists-catalogue)
 
-Welcome to **GistMaster**, the self-updatable catalogue for **Github Gists**!
+![GistMaster, a catalogue for your gists](docs/gistmaster.png)
 
-This repository is automatically updated and organised, to provide a structured and visually appealing way to browse and understand them.
+Welcome to **GistMaster**, your self-updating catalogue for **Github Gists**!
+
+This repository compiles my Gists automatically using Github Actions, keeping them organised in a well-structured and easy-to-browse format.
+
+👉 **[Check my Gists below](#gists)** to explore various code samples.
+
+🧑‍💻 If you like this, you can create your own catalogue! The project is designed to be easily reused by other Github users with minimal configuration, as explained in the [Quick Start](#quick-start) guide.
+
 
 ## Table of Contents
 
@@ -62,10 +67,10 @@ This repository is automatically updated and organised, to provide a structured 
 ## About
 
 👋 I'm **[@{github_username}]({github_url})**, and my open-source contributions are available on my **[Github profile]({github_url})**.
-In this repository, you will find solutions to various interview questions, coding challenges, random snippets and scripts I've created.
-These gists are automatically fetched and updated using **Github Actions** and can be set in your profile as well. 
+In this repository, you will find solutions to various interview questions, coding challenges, and random snippets and scripts I've created.
+These gists are automatically fetched and updated using **Github Actions** and can be set up for your profile as well. 
 
-👉 **[Check out my Gists below](#gists)** to see my work and explore the code samples.
+👉 **[Explore my Gists below](#gists)** to see my work and discover useful code samples.
 
 ## Quick Start
 
@@ -73,7 +78,7 @@ These gists are automatically fetched and updated using **Github Actions** and c
 
 ## Contributing
 
-🤝 Contributions are more than welcome! Please read the [Contributing Guidelines](docs/CONTRIBUTING.md) and [Code of Conduct](docs/CODE_OF_CONDUCT.md).
+🤝 Contributions are welcome! Please read the [Contributing Guidelines](docs/CONTRIBUTING.md) and [Code of Conduct](docs/CODE_OF_CONDUCT.md).
 
 ## License
 
