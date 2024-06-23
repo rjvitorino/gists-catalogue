@@ -1,9 +1,16 @@
 
 # GistMaster
 
+![Build Status](https://img.shields.io/github/actions/workflow/status/rjvitorino/gists-catalogue/build.yml?branch=main)
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/rjvitorino/gists-catalogue/update_gists.yml?branch=main)
+![GitHub commits](https://img.shields.io/github/commit-activity/m/rjvitorino/gists-catalogue)
+![GitHub contributors](https://img.shields.io/github/contributors/rjvitorino/gists-catalogue)
 ![Coverage Status](https://coveralls.io/repos/github/rjvitorino/gists-catalogue/badge.svg?branch=main)
+![GitHub issues](https://img.shields.io/github/issues/rjvitorino/gists-catalogue)
+![GitHub last commit](https://img.shields.io/github/last-commit/rjvitorino/gists-catalogue)
+![GitHub language count](https://img.shields.io/github/languages/count/rjvitorino/gists-catalogue)
 ![License](https://img.shields.io/github/license/rjvitorino/gists-catalogue)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/rjvitorino/gists-catalogue)
 
 ![GistMaster, a catalogue for your gists](docs/gistmaster.png)
 
