@@ -1,7 +1,6 @@
 
 # GistMaster
 
-![Build Status](https://img.shields.io/github/actions/workflow/status/rjvitorino/gists-catalogue/build.yml?branch=main)
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/rjvitorino/gists-catalogue/update_gists.yml?branch=main)
 ![GitHub commits](https://img.shields.io/github/commit-activity/m/rjvitorino/gists-catalogue)
 ![GitHub contributors](https://img.shields.io/github/contributors/rjvitorino/gists-catalogue)
