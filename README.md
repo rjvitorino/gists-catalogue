@@ -84,3 +84,10 @@ These gists are automatically fetched and updated using **Github Actions** and c
 * **Language**: Python
 * **Created at**: 2024-06-19
 * **Last updated at**: 2024-06-19
+
+### [Gist no. 5](gists/20240624-daily_temperatures-gist/index.md)
+
+* **Description**: Cassidoo's interview question of the week: a function that takes an array of daily temperatures and returns an array where each element is the number of days you would have to wait until a warmer temperature. If there is no future day for which this is possible, put 0 instead.
+* **Language**: Python
+* **Created at**: 2024-06-24
+* **Last updated at**: 2024-06-24
