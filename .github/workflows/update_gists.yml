@@ -43,7 +43,7 @@ jobs:
           python tests/profile_gists.py
     
       - name: Upload profiling results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: profiling-results
           path: tests/restats
