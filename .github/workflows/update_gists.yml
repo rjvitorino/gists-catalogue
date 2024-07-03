@@ -6,6 +6,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -37,6 +40,20 @@ jobs:
       - name: Run Tests
         run: |
           pytest
+      
+      - name: Run tests with coverage
+        run: |
+          python -m coverage run -p -m pytest
+          python -m coverage combine
+          python -m coverage report -m --skip-covered
+          python -m coverage json
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4.5.0
+        with:
+          file: ./coverage.json
+          flags: unittests
+          name: codecov-umbrella
 
       - name: Run cProfile
         run: |

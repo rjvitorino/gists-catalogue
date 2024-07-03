@@ -2,3 +2,4 @@ requests==2.32.3
 ruff==0.4.10
 pytest==8.2.2
 pip-tools==7.4.1
+coverage==7.5.4
