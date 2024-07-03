@@ -17,7 +17,8 @@ class FruitStand:
     """
 
     def __init__(self) -> None:
-        """Initialise the fruit stand with an empty dictionary to store fruits.
+        """
+        Initialise the fruit stand with an empty dictionary to store fruits.
         
         :type self: FruitStand
         :rtype: None
@@ -25,7 +26,8 @@ class FruitStand:
         self.fruits: Dict[str, Dict[str, float]] = {}
 
     def add_fruit(self, name: str, quantity: int, price: float) -> None:
-        """Add a fruit to the stand with the given quantity and price.
+        """
+        Add a fruit to the stand with the given quantity and price.
         
         :type self: FruitStand
         :type name: str
@@ -40,7 +42,8 @@ class FruitStand:
             self.fruits[name] = {'quantity': quantity, 'price': price}
 
     def update_quantity(self, name: str, quantity: int) -> None:
-        """Update the quantity of an existing fruit.
+        """
+        Update the quantity of an existing fruit.
         
         :type self: FruitStand
         :type name: str
@@ -54,7 +57,8 @@ class FruitStand:
             raise ValueError(f"Fruit '{name}' not found in the stand.")
         
     def update_price(self, name: str, price: float) -> None:
-        """Update the price of an existing fruit.
+        """
+        Update the price of an existing fruit.
         
         :type self: FruitStand
         :type name: str
@@ -68,7 +72,8 @@ class FruitStand:
             raise ValueError(f"Fruit '{name}' not found in the stand.")
 
     def total_value(self) -> float:
-        """Calculate the total value of all fruits in the stand.
+        """
+        Calculate the total value of all fruits in the stand.
         
         :type self: FruitStand
         :rtype: float
@@ -77,7 +82,8 @@ class FruitStand:
         return total
     
     def missing_stock(self) -> List[str]:
-        """Return a list of fruits with zero quantity.
+        """
+        Return a list of fruits with zero quantity.
         
         :type self: FruitStand
         :rtype: List[str]
@@ -86,7 +92,8 @@ class FruitStand:
 
 
 def main() -> None:
-    """Demonstrate the usage of the FruitStand class.
+    """
+    Demonstrate the usage of the FruitStand class.
     
     :rtype: None
     """
@@ -105,7 +112,8 @@ def main() -> None:
 
 
 def test_fruit_stand() -> None:
-    """Test the functionality of the FruitStand class.
+    """
+    Test the functionality of the FruitStand class.
     
     :rtype: None
     """
