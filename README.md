@@ -98,3 +98,10 @@ These gists are automatically fetched and updated using **Github Actions** and c
 * **Language**: Python
 * **Created at**: 2024-07-01
 * **Last updated at**: 2024-07-02
+
+### [Gist no. 7](gists/20240708-flower_planter-gist/index.md)
+
+* **Description**: Cassidoo's interview question of the week: a function that takes an array of integers representing the number of flowers planted in a line, and an integer k representing the number of additional flowers you want to plant. Return whether it's possible to plant all k flowers without planting any two flowers adjacent to each other.
+* **Language**: Python
+* **Created at**: 2024-07-08
+* **Last updated at**: 2024-07-08
