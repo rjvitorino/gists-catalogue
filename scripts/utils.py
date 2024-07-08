@@ -235,7 +235,7 @@ def create_gist_index(gist: Gist) -> str:
     index_content = [
         f"# {folder_name}",
         "",
-        f"**Gist file**: [{filename}]({gist.html_url})",
+        f"**Gist file**: [{gist.html_url}]({gist.html_url})",
         "",
         f"**Description**: {gist.description}",
         "",
