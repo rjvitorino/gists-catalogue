@@ -1,6 +1,6 @@
 # 20240610-four_sum-gist
 
-**Gist URL**: [link](https://gist.github.com/rjvitorino/4ecfa7d0c4d6ee037811958deb462e19)
+**Gist URL**: [4ecfa7d0c4d6ee037811958deb462e19](https://gist.github.com/rjvitorino/4ecfa7d0c4d6ee037811958deb462e19)
 
 **Description**: Cassidoo's interview question of the week: a function that takes an array of integers and a target sum, and returns all unique quadruplets [a, b, c, d] in the array such that a + b + c + d = target
 

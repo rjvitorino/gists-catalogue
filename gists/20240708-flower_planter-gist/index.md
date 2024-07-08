@@ -1,6 +1,6 @@
 # 20240708-flower_planter-gist
 
-**Gist URL**: [link](https://gist.github.com/rjvitorino/ffbfe12e757c05f6b0022b780f6dd75e)
+**Gist URL**: [ffbfe12e757c05f6b0022b780f6dd75e](https://gist.github.com/rjvitorino/ffbfe12e757c05f6b0022b780f6dd75e)
 
 **Description**: Cassidoo's interview question of the week: a function that takes an array of integers representing the number of flowers planted in a line, and an integer k representing the number of additional flowers you want to plant. Return whether it's possible to plant all k flowers without planting any two flowers adjacent to each other.
 
