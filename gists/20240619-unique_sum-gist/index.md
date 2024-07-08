@@ -1,5 +1,7 @@
 # 20240619-unique_sum-gist
 
+**Gist URL**: [link](https://gist.github.com/rjvitorino/49888043e13e4b2c06e697712167ea7d)
+
 **Description**: Cassidy's interview question of the week (20240401 - April fools!): Given an array of numbers, add all of the values together but only if the number does not repeat a digit.
 
 ## unique_sum.py

@@ -1,5 +1,7 @@
 # 20240701-fruit_stand-gist
 
+**Gist URL**: [link](https://gist.github.com/rjvitorino/d49821100b26bd24f689801acdea3045)
+
 **Description**: Cassidoo's interview question of the week: a FruitStand class that allows you to add different types of fruits with their quantities and prices, update them, and calculate the total value of all the fruits in the stand.
 
 ## fruit_stand.py

@@ -7,13 +7,22 @@ class FlowerPlanter:
 
     def has_enough_spaces(self, k: int) -> bool:
         """Check if there are enough spaces to plant k flowers without adjacent flowers."""
+        if k == 0:  # Early return
+            return True
+
         available_spots, garden_length = 0, len(self.garden)
 
         for space in range(1, garden_length - 1):
-            if self.garden[space] == 0 and self.garden[space - 1] == 0 and self.garden[space + 1] == 0:
+            is_current_space_empty = self.garden[space] == 0
+            is_previous_space_empty = self.garden[space - 1] == 0
+            is_next_space_empty = self.garden[space + 1] == 0
+
+            if is_current_space_empty and is_previous_space_empty and is_next_space_empty:
                 available_spots += 1
                 # Place a flower to avoid adjacent placements
                 self.garden[space] = 1
+                if available_spots >= k:  # Early exit
+                    return True
         
         return available_spots >= k
 

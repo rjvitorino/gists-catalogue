@@ -1,5 +1,7 @@
 # 20240603-only_evens-gist
 
+**Gist URL**: [link](https://gist.github.com/rjvitorino/b479dc2c27d3854b210955ff032d3413)
+
 **Description**: Cassidoo's interview question of the week: a function that takes an array of integers and returns a new array containing only the even numbers, and sorted.
 
 ## only_evens.py
