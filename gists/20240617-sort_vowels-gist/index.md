@@ -1,6 +1,6 @@
 # 20240617-sort_vowels-gist
 
-**Gist URL**: [dfef5433066c061954d29d1b15202290](https://gist.github.com/rjvitorino/dfef5433066c061954d29d1b15202290)
+**Gist file**: [https://gist.github.com/rjvitorino/dfef5433066c061954d29d1b15202290](https://gist.github.com/rjvitorino/dfef5433066c061954d29d1b15202290)
 
 **Description**: Cassidoo's interview question of the week: a function that takes a list of names and returns the names sorted by the number of vowels in each name in descending order. If two names have the same number of vowels, sort them alphabetically.
 
