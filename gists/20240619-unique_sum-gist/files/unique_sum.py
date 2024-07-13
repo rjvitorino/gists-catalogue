@@ -11,6 +11,7 @@ def has_unique_digits(number: int) -> bool:
     digits = str(number)
     return len(set(digits)) == len(digits)
 
+
 def unique_sum(numbers: list) -> int:
     """
     Calculate the sum of numbers in the list that have unique digits.
@@ -23,16 +24,19 @@ def unique_sum(numbers: list) -> int:
     """
     return sum(number for number in numbers if has_unique_digits(number))
 
+
 # Testing the function with the provided examples.
 test_cases = [
     ([1, 2, 3], 6),
     ([11, 22, 33], 0),
     ([101, 2, 3], 5),
-    ([123, 456, 789, 122, 133], 1368)  # Additional test case
+    ([123, 456, 789, 122, 133], 1368),  # Additional test case
 ]
 
 # Running tests and printing results
 for numbers, expected in test_cases:
     result = unique_sum(numbers)
-    assert result == expected, f"Test failed for input {numbers}: expected {expected}, got {result}"
+    assert (
+        result == expected
+    ), f"Test failed for input {numbers}: expected {expected}, got {result}"
     print(f"Test passed for input {numbers}: got {result}")

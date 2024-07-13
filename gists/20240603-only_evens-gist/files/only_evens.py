@@ -1,5 +1,6 @@
 from typing import List
 
+
 def only_evens(numbers: List[int]) -> List[int]:
     """
     Returns a sorted list of even numbers from the input list.
@@ -11,13 +12,14 @@ def only_evens(numbers: List[int]) -> List[int]:
     # Validate input
     if not all(isinstance(number, int) for number in numbers):
         raise ValueError("All elements in the input list must be integers")
-    
+
     def is_even(number: int) -> bool:
         return number % 2 == 0
 
     # Use filter to select even numbers from the input list
     even_numbers = filter(is_even, numbers)
     return sorted(even_numbers)
+
 
 if __name__ == "__main__":
     # Test cases with assertions
@@ -29,7 +31,7 @@ if __name__ == "__main__":
 
     # Test case to handle ValueError
     try:
-        only_evens([1, 'two', 3])
+        only_evens([1, "two", 3])
     except ValueError:
         print("Caught expected ValueError for non-integer input")
 

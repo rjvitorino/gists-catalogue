@@ -1,5 +1,6 @@
 from typing import List
 
+
 class FlowerPlanter:
     def __init__(self, garden: List[int]) -> None:
         """Initialise the garden with padded zeros at both ends."""
@@ -17,27 +18,33 @@ class FlowerPlanter:
             is_previous_space_empty = self.garden[space - 1] == 0
             is_next_space_empty = self.garden[space + 1] == 0
 
-            if is_current_space_empty and is_previous_space_empty and is_next_space_empty:
+            if (
+                is_current_space_empty
+                and is_previous_space_empty
+                and is_next_space_empty
+            ):
                 available_spots += 1
                 # Place a flower to avoid adjacent placements
                 self.garden[space] = 1
                 if available_spots >= k:  # Early exit
                     return True
-        
+
         return available_spots >= k
+
 
 def can_plant_flowers(garden: List[int], k: int) -> bool:
     """Determine if k flowers can be planted without any two being adjacent.
-    
+
     Args:
         garden (List[int]): The garden array where 1 represents a flower and 0 represents an empty spot.
         k (int): The number of flowers to be planted.
-    
+
     Returns:
         bool: True if k flowers can be planted without adjacent flowers, False otherwise.
     """
     planter = FlowerPlanter(garden)
     return planter.has_enough_spaces(k)
+
 
 if __name__ == "__main__":
     assert can_plant_flowers([1, 0, 0, 0, 1], 1) is True  # Can plant 1 flower

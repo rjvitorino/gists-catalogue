@@ -9,6 +9,7 @@
 ```Python
 from typing import List
 
+
 def count_vowels(name: str) -> int:
     """Helper function to count the number of vowels in a name."""
     vowels = "aeiouAEIOU"
@@ -44,11 +45,17 @@ if __name__ == "__main__":
     expected_sorted_names3 = ["Doe", "John"]
 
     # Verify if the function's output matches the expected results
-    assert sorted_names1 == expected_sorted_names1, f"Expected {expected_sorted_names1}, but got {sorted_names1}"
+    assert (
+        sorted_names1 == expected_sorted_names1
+    ), f"Expected {expected_sorted_names1}, but got {sorted_names1}"
     print(sorted_names1)  # Output: ["Piccolo", "Vegeta", "Gohan", "Goku"]
-    assert sorted_names2 == expected_sorted_names2, f"Expected {expected_sorted_names2}, but got {sorted_names2}"
+    assert (
+        sorted_names2 == expected_sorted_names2
+    ), f"Expected {expected_sorted_names2}, but got {sorted_names2}"
     print(sorted_names2)  # Output: ["Alphonse", "Edward", "Roy", "Winry"]
-    assert sorted_names3 == expected_sorted_names3, f"Expected {expected_sorted_names3}, but got {sorted_names3}"
+    assert (
+        sorted_names3 == expected_sorted_names3
+    ), f"Expected {expected_sorted_names3}, but got {sorted_names3}"
     print(sorted_names3)  # Output: ["Doe", "John"]
 
 ```
