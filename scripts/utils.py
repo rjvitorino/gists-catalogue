@@ -15,15 +15,17 @@ except ImportError:
     from gist import Gist
 
 # Setup logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+)
 
 # GitHub username and access token are defined as ENV variables
-GITHUB_USERNAME = os.getenv('GITHUB_USERNAME', 'rjvitorino')
-GITHUB_TOKEN = os.getenv('GISTMASTER_TOKEN')
+GITHUB_USERNAME = os.getenv("GITHUB_USERNAME", "rjvitorino")
+GITHUB_TOKEN = os.getenv("GISTMASTER_TOKEN")
 
 # API Endpoint to retrieve Gists and Headers for authentication
-GITHUB_API = f'https://api.github.com/users/{GITHUB_USERNAME}/gists'
-HEADERS = {'Authorization': f'token {GITHUB_TOKEN}'} if GITHUB_TOKEN else {}
+GITHUB_API = f"https://api.github.com/users/{GITHUB_USERNAME}/gists"
+HEADERS = {"Authorization": f"token {GITHUB_TOKEN}"} if GITHUB_TOKEN else {}
 
 GIST_FORMAT = """
 
@@ -100,6 +102,7 @@ These gists are automatically fetched and updated using **Github Actions** and c
 
 # Functions that use Github API to fetch its data
 
+
 def fetch_gists() -> List[Gist]:
     """
     Fetch the list of Gists for the user with username set in `GITHUB_USERNAME`.
@@ -118,6 +121,7 @@ def fetch_gists() -> List[Gist]:
     except Exception as error:
         logging.error(f"An error occurred: {error}")
         raise
+
 
 def fetch_gist_content(raw_url: str) -> str:
     """
@@ -140,7 +144,9 @@ def fetch_gist_content(raw_url: str) -> str:
         logging.error(f"An error occurred: {error}")
         raise
 
+
 # Functions to manage the content within this repository
+
 
 def format_date(date_text: str, date_format: str = "YYYY-MM-DD") -> str:
     """
@@ -154,14 +160,15 @@ def format_date(date_text: str, date_format: str = "YYYY-MM-DD") -> str:
         str: The formatted date string.
     """
     format_mappings = {
-        'YYYY-MM': '%Y-%m',
-        'YYYY/MM': '%Y/%m',
-        'YYYY/MM/DD': '%Y/%m/%d',
-        'YYYY-MM-DD': '%Y-%m-%d',
-        'YYYYMMDD': '%Y%m%d'
+        "YYYY-MM": "%Y-%m",
+        "YYYY/MM": "%Y/%m",
+        "YYYY/MM/DD": "%Y/%m/%d",
+        "YYYY-MM-DD": "%Y-%m-%d",
+        "YYYYMMDD": "%Y%m%d",
     }
-    date_obj = datetime.strptime(date_text, '%Y-%m-%dT%H:%M:%SZ')
+    date_obj = datetime.strptime(date_text, "%Y-%m-%dT%H:%M:%SZ")
     return date_obj.strftime(format_mappings.get(date_format))
+
 
 def sanitise_folder_name(name: str) -> str:
     """
@@ -175,10 +182,11 @@ def sanitise_folder_name(name: str) -> str:
         str: The sanitised folder name.
     """
     # Remove file extension
-    name_without_extension = re.sub(r'\.[^.]+$', '', name)
+    name_without_extension = re.sub(r"\.[^.]+$", "", name)
     # Replace non-alphanumeric characters with underscores
-    sanitised_name = re.sub(r'[^a-zA-Z0-9]', '_', name_without_extension)
+    sanitised_name = re.sub(r"[^a-zA-Z0-9]", "_", name_without_extension)
     return sanitised_name[:50]  # Limit folder name length
+
 
 def generate_folder_name(gist: Gist) -> str:
     """
@@ -192,12 +200,15 @@ def generate_folder_name(gist: Gist) -> str:
     """
     # Format the creation date
     date_part = format_date(gist.created_at, "YYYYMMDD")
-    
+
     # Sanitize and concatenate all filenames
-    filenames_part = '_'.join(sanitise_folder_name(filename) for filename in gist.files.keys())
-    
+    filenames_part = "_".join(
+        sanitise_folder_name(filename) for filename in gist.files.keys()
+    )
+
     # Combine date, -gist-, and filenames
     return f"{date_part}-{filenames_part}-gist"
+
 
 def save_gist_files(gist: Gist, folder_name: str = None) -> str:
     """
@@ -205,18 +216,19 @@ def save_gist_files(gist: Gist, folder_name: str = None) -> str:
 
     Args:
         gist (Gist): The Gist object.
-    
+
     """
     if not folder_name:
         folder_name = generate_folder_name(gist)
-    files_dir = Path('gists') / folder_name / 'files'
+    files_dir = Path("gists") / folder_name / "files"
     files_dir.mkdir(parents=True, exist_ok=True)
-    
+
     for filename, fileinfo in gist.files.items():
         content = fetch_gist_content(fileinfo.raw_url)
-        with open(files_dir / filename, 'w') as file:
+        with open(files_dir / filename, "w") as file:
             file.write(content)
     return folder_name
+
 
 def create_gist_index(gist: Gist) -> str:
     """
@@ -224,12 +236,12 @@ def create_gist_index(gist: Gist) -> str:
 
     Args:
         gist (Gist): The Gist object.
-    
+
     Returns:
         folder_name (str): The folder name of the gist
     """
     folder_name = generate_folder_name(gist)
-    gist_dir = Path('gists') / folder_name
+    gist_dir = Path("gists") / folder_name
     gist_dir.mkdir(parents=True, exist_ok=True)
 
     index_content = [
@@ -242,12 +254,13 @@ def create_gist_index(gist: Gist) -> str:
         *(
             f"## {filename}\n\n```{fileinfo.language}\n{fetch_gist_content(fileinfo.raw_url)}\n```"
             for filename, fileinfo in gist.files.items()
-        )
+        ),
     ]
-    
-    with open(gist_dir / 'index.md', 'w') as index_file:
+
+    with open(gist_dir / "index.md", "w") as index_file:
         index_file.write("\n".join(index_content))
     return folder_name
+
 
 def update_readme(gists: List[Gist]) -> None:
     """
@@ -257,31 +270,31 @@ def update_readme(gists: List[Gist]) -> None:
         gists (List[Gist]): A list of Gist objects.
     """
     github_profile = gists[0].owner
-    readme_content = README.format(github_username=github_profile.get('login', GITHUB_USERNAME), github_url=github_profile.get('html_url', ''))
+    readme_content = README.format(
+        github_username=github_profile.get("login", GITHUB_USERNAME),
+        github_url=github_profile.get("html_url", ""),
+    )
 
     gist_entries = []
     for index, gist in enumerate(gists, start=1):
         heading = f"Gist no. {index}"
         folder_name = generate_folder_name(gist)
-        languages = ', '.join(file.language for file in gist.files.values())
+        languages = ", ".join(file.language for file in gist.files.values())
         creation_date = format_date(gist.created_at)
         update_date = format_date(gist.updated_at)
         gist_entry = GIST_FORMAT.format(
-            heading=heading, 
-            folder_name=folder_name, 
-            description=gist.description, 
-            language=languages, 
-            creation_date=creation_date, 
-            update_date=update_date
+            heading=heading,
+            folder_name=folder_name,
+            description=gist.description,
+            language=languages,
+            creation_date=creation_date,
+            update_date=update_date,
         )
         gist_entries.append(gist_entry.strip())
-    
+
     # Combine all parts of the README content
     full_readme_content = readme_content + "\n\n".join(gist_entries)
-    
+
     # Write the README file
-    with open(Path('README.md'), 'w') as readme_file:
+    with open(Path("README.md"), "w") as readme_file:
         readme_file.write(full_readme_content)
-
-
-

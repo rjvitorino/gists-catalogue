@@ -16,8 +16,12 @@ except ImportError:
     from scripts.utils import update_readme
 
 # Configure logging
-logging.basicConfig(level=logging.INFO, filename='gist_catalogue.log', 
-                    format='%(asctime)s:%(levelname)s:%(message)s')
+logging.basicConfig(
+    level=logging.INFO,
+    filename="gist_catalogue.log",
+    format="%(asctime)s:%(levelname)s:%(message)s",
+)
+
 
 def main() -> None:
     """
@@ -35,10 +39,10 @@ def main() -> None:
             folder_name = create_gist_index(gist)
             save_gist_files(gist, folder_name)
             logging.info(f"Processed gist: {folder_name}")
-        
-        logging.info("Updating README...")    
+
+        logging.info("Updating README...")
         update_readme(sorted_gists)
-        
+
         logging.info("Gists update complete.")
 
     except HTTPError as http_error:
@@ -47,5 +51,6 @@ def main() -> None:
         # TODO remove Pokemon exception
         logging.error(f"An error occurred: {error}")
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()
