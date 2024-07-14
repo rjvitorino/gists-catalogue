@@ -5,6 +5,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import List
 
+import pandas as pd
 import requests
 
 try:
@@ -262,7 +263,7 @@ def create_gist_index(gist: Gist) -> str:
     return folder_name
 
 
-def update_readme(gists: List[Gist]) -> None:
+def update_readme(gists: List[Gist], use_table_format: bool = True) -> None:
     """
     Update the README.md file with the list of Gists.
 
@@ -275,25 +276,60 @@ def update_readme(gists: List[Gist]) -> None:
         github_url=github_profile.get("html_url", ""),
     )
 
-    gist_entries = []
+    gists_entries = []
     for index, gist in enumerate(gists, start=1):
-        heading = f"Gist no. {index}"
+        description = gist.description
         folder_name = generate_folder_name(gist)
+        created_at = format_date(gist.created_at)
+        updated_at = format_date(gist.updated_at)
         languages = ", ".join(file.language for file in gist.files.values())
-        creation_date = format_date(gist.created_at)
-        update_date = format_date(gist.updated_at)
-        gist_entry = GIST_FORMAT.format(
-            heading=heading,
+        list_entry = GIST_FORMAT.format(
+            heading=f"Gist no. {index}",
             folder_name=folder_name,
             description=gist.description,
             language=languages,
-            creation_date=creation_date,
-            update_date=update_date,
+            creation_date=created_at,
+            update_date=updated_at,
         )
-        gist_entries.append(gist_entry.strip())
+        gists_entries.append(
+            [
+                index,
+                description,
+                folder_name,
+                languages,
+                created_at,
+                updated_at,
+                list_entry,
+            ]
+        )
+
+    # Generate content based on the format (table vs list)
+    if use_table_format:
+        df = pd.DataFrame(
+            gists_entries,
+            columns=[
+                "Gist",
+                "Description",
+                "Folder name",
+                "Language(s)",
+                "Creation date",
+                "Last updated at",
+                "Gist Entry",
+            ],
+        )
+        df["Gist"] = df.apply(
+            lambda row: f"[{row.name + 1}](gists/{row['Folder name']}/index.md)", axis=1
+        )
+        # Generate Markdown table
+        gists_content = df[
+            ["Gist", "Description", "Language(s)", "Creation date", "Last updated at"]
+        ].to_markdown(index=False)
+    else:
+        # Generate list format with the list entry (GIST_FORMAT values)
+        gists_content = "".join([entry[-1] for entry in gists_entries])
 
     # Combine all parts of the README content
-    full_readme_content = readme_content + "\n\n".join(gist_entries)
+    full_readme_content = readme_content + gists_content
 
     # Write the README file
     with open(Path("README.md"), "w") as readme_file:

@@ -1,3 +1,4 @@
+import json
 import logging
 from requests import HTTPError
 
@@ -23,6 +24,11 @@ logging.basicConfig(
 )
 
 
+# Load configuration
+with open("config.json", "r") as config_file:
+    config = json.load(config_file)
+
+
 def main() -> None:
     """
     Main function to fetch the Gists from Github API, update the local files, and update the README.
@@ -41,7 +47,7 @@ def main() -> None:
             logging.info(f"Processed gist: {folder_name}")
 
         logging.info("Updating README...")
-        update_readme(sorted_gists)
+        update_readme(sorted_gists, config["display_format"] == "table")
 
         logging.info("Gists update complete.")
 

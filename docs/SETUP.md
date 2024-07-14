@@ -40,6 +40,17 @@ To run this repository on your own GitHub profile, please [fork it](https://gith
     - Ensure you have a `.github/workflows/update_gists.yml` file.
     - Update the file to include your repository and branch details.
 
+
+## Configuration
+
+You can choose to display the gists in a table or list format. To change the display format, update the `config.json` file in the root of the repository.
+
+```json
+{
+    "display_format": "table"  // or "list"
+}
+```
+
 ## Additional Information
 
 You can find more details about contributing in our [CONTRIBUTING.md](CONTRIBUTING.md) file and our code of conduct in the [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) file.
