@@ -57,51 +57,12 @@ These gists are automatically fetched and updated using **Github Actions** and c
 
 ## Gists
 
-### [Gist no. 1](gists/20240603-only_evens-gist/index.md)
-
-* **Description**: Cassidoo's interview question of the week: a function that takes an array of integers and returns a new array containing only the even numbers, and sorted.
-* **Language**: Python
-* **Created at**: 2024-06-03
-* **Last updated at**: 2024-07-13
-
-### [Gist no. 2](gists/20240610-four_sum-gist/index.md)
-
-* **Description**: Cassidoo's interview question of the week: a function that takes an array of integers and a target sum, and returns all unique quadruplets [a, b, c, d] in the array such that a + b + c + d = target
-* **Language**: Python
-* **Created at**: 2024-06-10
-* **Last updated at**: 2024-07-13
-
-### [Gist no. 3](gists/20240617-sort_vowels-gist/index.md)
-
-* **Description**: Cassidoo's interview question of the week: a function that takes a list of names and returns the names sorted by the number of vowels in each name in descending order. If two names have the same number of vowels, sort them alphabetically.
-* **Language**: Python
-* **Created at**: 2024-06-17
-* **Last updated at**: 2024-07-13
-
-### [Gist no. 4](gists/20240619-unique_sum-gist/index.md)
-
-* **Description**: Cassidy's interview question of the week (20240401 - April fools!): Given an array of numbers, add all of the values together but only if the number does not repeat a digit.
-* **Language**: Python
-* **Created at**: 2024-06-19
-* **Last updated at**: 2024-07-13
-
-### [Gist no. 5](gists/20240624-daily_temperatures-gist/index.md)
-
-* **Description**: Cassidoo's interview question of the week: a function that takes an array of daily temperatures and returns an array where each element is the number of days you would have to wait until a warmer temperature. If there is no future day for which this is possible, put 0 instead.
-* **Language**: Python
-* **Created at**: 2024-06-24
-* **Last updated at**: 2024-07-13
-
-### [Gist no. 6](gists/20240701-fruit_stand-gist/index.md)
-
-* **Description**: Cassidoo's interview question of the week: a FruitStand class that allows you to add different types of fruits with their quantities and prices, update them, and calculate the total value of all the fruits in the stand.
-* **Language**: Python
-* **Created at**: 2024-07-01
-* **Last updated at**: 2024-07-13
-
-### [Gist no. 7](gists/20240708-flower_planter-gist/index.md)
-
-* **Description**: Cassidoo's interview question of the week: a function that takes an array of integers representing the number of flowers planted in a line, and an integer k representing the number of additional flowers you want to plant. Return whether it's possible to plant all k flowers without planting any two flowers adjacent to each other.
-* **Language**: Python
-* **Created at**: 2024-07-08
-* **Last updated at**: 2024-07-13
+| Gist                                                 | Description                                                                                                                                                                                                                                                                                                                                | Language(s)   | Creation date   | Last updated at   |
+|:-----------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------|:----------------|:------------------|
+| [1](gists/20240603-only_evens-gist/index.md)         | Cassidoo's interview question of the week: a function that takes an array of integers and returns a new array containing only the even numbers, and sorted.                                                                                                                                                                                | Python        | 2024-06-03      | 2024-07-13        |
+| [2](gists/20240610-four_sum-gist/index.md)           | Cassidoo's interview question of the week: a function that takes an array of integers and a target sum, and returns all unique quadruplets [a, b, c, d] in the array such that a + b + c + d = target                                                                                                                                      | Python        | 2024-06-10      | 2024-07-13        |
+| [3](gists/20240617-sort_vowels-gist/index.md)        | Cassidoo's interview question of the week: a function that takes a list of names and returns the names sorted by the number of vowels in each name in descending order. If two names have the same number of vowels, sort them alphabetically.                                                                                             | Python        | 2024-06-17      | 2024-07-13        |
+| [4](gists/20240619-unique_sum-gist/index.md)         | Cassidy's interview question of the week (20240401 - April fools!): Given an array of numbers, add all of the values together but only if the number does not repeat a digit.                                                                                                                                                              | Python        | 2024-06-19      | 2024-07-13        |
+| [5](gists/20240624-daily_temperatures-gist/index.md) | Cassidoo's interview question of the week: a function that takes an array of daily temperatures and returns an array where each element is the number of days you would have to wait until a warmer temperature. If there is no future day for which this is possible, put 0 instead.                                                      | Python        | 2024-06-24      | 2024-07-13        |
+| [6](gists/20240701-fruit_stand-gist/index.md)        | Cassidoo's interview question of the week: a FruitStand class that allows you to add different types of fruits with their quantities and prices, update them, and calculate the total value of all the fruits in the stand.                                                                                                                | Python        | 2024-07-01      | 2024-07-13        |
+| [7](gists/20240708-flower_planter-gist/index.md)     | Cassidoo's interview question of the week: a function that takes an array of integers representing the number of flowers planted in a line, and an integer k representing the number of additional flowers you want to plant. Return whether it's possible to plant all k flowers without planting any two flowers adjacent to each other. | Python        | 2024-07-08      | 2024-07-13        |
