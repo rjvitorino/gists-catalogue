@@ -62,13 +62,13 @@ assert increasing_subsequence([1, 2, 3, 4, 5]) == 5
 assert increasing_subsequence([5, 4, 3, 2, 1]) == 1
 assert increasing_subsequence([2, 2, 2, 2, 2]) == 1
 assert increasing_subsequence([10, 20, 10, 30, 20, 50]) == 4
-assert (increasing_subsequence([0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15]) == 6)  # fmt: off
+assert increasing_subsequence([0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15]) == 6  # fmt: off
 
 # Consecutive only examples
-assert (increasing_subsequence([10, 9, 2, 3, 7, 101, 18], allow_non_consecutive=False) == 4)  # fmt: off
+assert increasing_subsequence([10, 9, 2, 3, 7, 101, 18], allow_non_consecutive=False) == 4  # fmt: off
 assert increasing_subsequence([4, 4, 4, 4, 3], allow_non_consecutive=False) == 1
 assert increasing_subsequence([1, 2, 3, 4, 5], allow_non_consecutive=False) == 5
 assert increasing_subsequence([5, 4, 3, 2, 1], allow_non_consecutive=False) == 1
 assert increasing_subsequence([2, 2, 2, 2, 2], allow_non_consecutive=False) == 1
-assert (increasing_subsequence([10, 20, 10, 30, 20, 50], allow_non_consecutive=False) == 2)  # fmt: off
-assert (increasing_subsequence([0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15], allow_non_consecutive=False) == 2)  # fmt: off
+assert increasing_subsequence([10, 20, 10, 30, 20, 50], allow_non_consecutive=False) == 2  # fmt: off
+assert increasing_subsequence([0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15], allow_non_consecutive=False) == 2  # fmt: off
