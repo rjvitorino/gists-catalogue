@@ -12,7 +12,7 @@ charset-normalizer==3.3.2
     # via requests
 click==8.1.7
     # via pip-tools
-coverage==7.5.4
+coverage==7.6.0
     # via -r requirements.in
 exceptiongroup==1.2.1
     # via pytest
