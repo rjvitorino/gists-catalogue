@@ -313,16 +313,17 @@ def update_readme(gists: List[Gist], use_table_format: bool = True) -> None:
                 "Folder name",
                 "Language(s)",
                 "Creation date",
-                "Last updated at",
+                "Last updated",
                 "Gist Entry",
             ],
         )
         df["Gist"] = df.apply(
-            lambda row: f"[No. {row.name + 1}](gists/{row['Folder name']}/index.md)", axis=1
+            lambda row: f"[{row.name + 1}](gists/{row['Folder name']}/index.md)",
+            axis=1,
         )
         # Generate Markdown table
         gists_content = df[
-            ["Gist", "Description", "Language(s)", "Creation date", "Last updated at"]
+            ["Gist", "Description", "Language(s)", "Creation date", "Last updated"]
         ].to_markdown(index=False)
     else:
         # Generate list format with the list entry (GIST_FORMAT values)
