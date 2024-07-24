@@ -2,7 +2,7 @@
 
 **Gist file**: [https://gist.github.com/rjvitorino/c97ca5f07c41adf4450c4b8e744b7834](https://gist.github.com/rjvitorino/c97ca5f07c41adf4450c4b8e744b7834)
 
-**Description**: Cassidoo's interview question of the week: a function that given a string s and a dictionary of words dict, determine if s can be segmented into a space-separated sequence of one or more dictionary words.
+**Description**: Cassidoo's interview question of the week: a function that given a string s and a list of words word_dict, determine if s can be segmented into the space-separated sequence of all the dictionary words.
 
 ## word_break.py
 
