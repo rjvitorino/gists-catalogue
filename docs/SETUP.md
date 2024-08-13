@@ -43,11 +43,13 @@ To run this repository on your own GitHub profile, please [fork it](https://gith
 
 ## Configuration
 
-You can choose to display the gists in a table or list format. To change the display format, update the `config.json` file in the root of the repository.
+You can choose to display the gists in a table or list format and decide whether to fetch and store the gists code locally or not.
+To configure these options, update the `config.json` file in the root of the repository.
 
 ```json
 {
-    "display_format": "table"  // or "list"
+    "display_format": "table",  // or "list"
+    "fetch_gist_code": true      // or false
 }
 ```
 

@@ -43,7 +43,8 @@ def main() -> None:
         logging.info("Creating gists directories and files...")
         for gist in sorted_gists:
             folder_name = create_gist_index(gist)
-            save_gist_files(gist, folder_name)
+            if config["fetch_gist_code"] is True:
+                save_gist_files(gist, folder_name)
             logging.info(f"Processed gist: {folder_name}")
 
         logging.info("Updating README...")
