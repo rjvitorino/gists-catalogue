@@ -1,4 +1,5 @@
 {
-    "display_format": "table"
+    "display_format": "table",
+    "fetch_gist_code": false
 }
 
