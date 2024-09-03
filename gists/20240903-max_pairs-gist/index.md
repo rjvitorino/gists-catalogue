@@ -2,7 +2,7 @@
 
 **Gist file**: [https://gist.github.com/rjvitorino/0918db0cd3a3e19ba964f35a0157b339](https://gist.github.com/rjvitorino/0918db0cd3a3e19ba964f35a0157b339)
 
-**Description**: Cassidy's Interview Question of the Week: a function to calculate the maximum number of matching shoe pairs in an array of strings
+**Description**: Cassidy's interview question of the week: a function to calculate the maximum number of matching shoe pairs in an array of strings
 
 ## max_pairs.py
 
