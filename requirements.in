@@ -1,6 +1,6 @@
 requests==2.32.3
 ruff==0.6.5
-pytest==8.3.2
+pytest==8.3.3
 pip-tools==7.4.1
 coverage==7.6.1
 pandas==2.2.2
