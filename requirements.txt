@@ -20,6 +20,8 @@ idna==3.7
     # via requests
 iniconfig==2.0.0
     # via pytest
+isort==5.13.2
+    # via -r requirements.in
 numpy==2.0.0
     # via pandas
 packaging==24.1

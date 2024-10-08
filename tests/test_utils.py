@@ -1,16 +1,16 @@
 from pathlib import Path
-from unittest.mock import patch
-from unittest.mock import mock_open
-from unittest.mock import MagicMock
+from unittest.mock import MagicMock, mock_open, patch
 
-from scripts.utils import fetch_gists
-from scripts.utils import fetch_gist_content
-from scripts.utils import format_date
-from scripts.utils import generate_folder_name
-from scripts.utils import save_gist_files
-from scripts.utils import create_gist_index
-from scripts.utils import update_readme
 from scripts.gist import Gist
+from scripts.utils import (
+    create_gist_index,
+    fetch_gist_content,
+    fetch_gists,
+    format_date,
+    generate_folder_name,
+    save_gist_files,
+    update_readme,
+)
 
 # Example data
 example_gist_data = {
