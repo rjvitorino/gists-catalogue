@@ -8,8 +8,7 @@
 
 ```Python
 from collections import defaultdict
-from typing import List
-from typing import Set
+from typing import List, Set
 
 
 def find_unused(lines: List[str]) -> List[str]:

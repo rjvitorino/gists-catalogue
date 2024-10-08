@@ -7,8 +7,7 @@
 ## split.py
 
 ```Python
-from typing import List
-from typing import Optional
+from typing import List, Optional
 
 
 class StringSplitter:

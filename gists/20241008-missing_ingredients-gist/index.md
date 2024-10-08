@@ -2,16 +2,15 @@
 
 **Gist file**: [https://gist.github.com/rjvitorino/abbbe5be143b0196552d30dca895a4f5](https://gist.github.com/rjvitorino/abbbe5be143b0196552d30dca895a4f5)
 
-**Description**: Cassidy's interview question of the week: a function that returns the minimum number of additional ingredients one needs to buy to make a recipe, given a list of ingredients needed for a recipe, represented as strings, and a list of ingredients in the pantry
+**Description**: Cassidy's interview question of the week: a function that, given a list of ingredients needed for a recipe (represented as strings), and a list of ingredients available in the pantry, returns the minimum number of additional ingredients one needs to buy to make the recipe
 
 ## missing_ingredients.py
 
 ```Python
-from typing import List
-from dataclasses import dataclass
-from datetime import datetime
-from datetime import timedelta
 from collections import Counter
+from dataclasses import dataclass
+from datetime import datetime, timedelta
+from typing import List
 
 
 @dataclass

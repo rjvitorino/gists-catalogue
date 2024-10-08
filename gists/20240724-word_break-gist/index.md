@@ -8,9 +8,7 @@
 
 ```Python
 import logging
-from typing import List
-from typing import Set
-from typing import Tuple
+from typing import List, Set, Tuple
 
 # Configure logging, change level to DEBUG to trace all checks
 logging.basicConfig(level=logging.INFO, format="%(levelname)s:%(message)s")

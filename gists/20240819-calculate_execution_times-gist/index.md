@@ -8,8 +8,7 @@
 
 ```Python
 from collections import defaultdict
-from typing import Dict
-from typing import List
+from typing import Dict, List
 
 
 class LogEntry:
@@ -21,6 +20,7 @@ class LogEntry:
         time (int): The timestamp in milliseconds since the program started.
         event (str): The event type, either 'start' or 'end'.
     """
+
     def __init__(self, name: str, time: int, event: str):
         self.name = name
         self.time = time

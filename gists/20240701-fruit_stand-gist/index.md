@@ -7,8 +7,7 @@
 ## fruit_stand.py
 
 ```Python
-from typing import Dict
-from typing import List
+from typing import Dict, List
 
 
 class FruitStand:

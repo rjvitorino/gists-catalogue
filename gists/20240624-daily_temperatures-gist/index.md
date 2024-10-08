@@ -7,8 +7,7 @@
 ## daily_temperatures.py
 
 ```Python
-from typing import List
-from typing import Tuple
+from typing import List, Tuple
 
 
 def daily_temperatures(temperatures: List[int]) -> List[int]:
