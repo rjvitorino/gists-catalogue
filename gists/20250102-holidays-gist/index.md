@@ -7,6 +7,14 @@
 ## holidays.py
 
 ```Python
+"""
+Holiday date calculation module.
+
+This module provides functionality to calculate dates and weekdays for various holidays
+in the Gregorian calendar, including both fixed-date holidays (like Christmas and New
+Years Day) and floating holidays (like Easter and Thanksgiving).
+"""
+
 from datetime import date, timedelta
 from enum import Enum
 from dataclasses import dataclass
@@ -25,7 +33,16 @@ WEEKDAYS = [
 
 @dataclass
 class HolidayInfo:
-    """Information about a holiday."""
+    """Information about a holiday.
+
+    Attributes:
+        name: Display name of the holiday
+        month: Month number (1-12, 0 for special cases like Easter)
+        day: Day of the month for fixed-date holidays
+        weekday: Day of week (0=Monday, 6=Sunday) for floating holidays
+        week_of_month: Week number (1=first, -1=last) for floating holidays
+        fixed_weekday: Name of weekday for holidays always falling on the same weekday
+    """
 
     name: str
     month: int
@@ -55,8 +72,26 @@ class Holiday(Enum):
 class HolidayCalculator:
     """Calculator for determining dates and weekdays of various holidays."""
 
+    _instance = None
+
+    def __new__(cls):
+        if cls._instance is None:
+            cls._instance = super().__new__(cls)
+        return cls._instance
+
     def get_holiday_date(self, holiday: Holiday, year: int) -> date:
-        """Get the date for a specific holiday in a given year."""
+        """Get the date for a specific holiday in a given year.
+
+        Args:
+            holiday: The holiday to calculate
+            year: The year for which to calculate the holiday
+
+        Returns:
+            date: The calculated date of the holiday
+
+        Raises:
+            ValueError: If the holiday cannot be calculated with the given parameters
+        """
         info = holiday.value
 
         # Special case for Easter
@@ -88,7 +123,17 @@ class HolidayCalculator:
     def _get_weekday_based_date(
         year: int, month: int, weekday: int, week_of_month: int
     ) -> date:
-        """Calculate date for holidays based on weekday and week of month."""
+        """Calculate date for holidays based on weekday and week of month.
+
+        Args:
+            year: The year for calculation
+            month: The month (1-12)
+            weekday: The day of week (0=Monday, 6=Sunday)
+            week_of_month: Which week (1=first, -1=last)
+
+        Returns:
+            date: The calculated date
+        """
         first_day = date(year, month, 1)
 
         if week_of_month == -1:  # Last occurrence
@@ -108,9 +153,18 @@ class HolidayCalculator:
     def _calculate_easter(self, year: int) -> date:
         """Calculate Easter Sunday using Butcher's Algorithm.
 
-        This algorithm calculates Easter Sunday's date for any year in the Gregorian calendar.
+        This algorithm determines Easter Sunday's date for any year in the Gregorian calendar.
         Easter falls on the first Sunday following the first ecclesiastical full moon
         that occurs on or after March 21.
+
+        Args:
+            year: The year for which to calculate Easter
+
+        Returns:
+            date: Easter Sunday's date
+
+        References:
+            - Butcher's Algorithm: https://en.wikipedia.org/wiki/Computus#Butcher's_algorithm
         """
         golden_year = year % 19  # Position in the 19-year Metonic cycle
         century = year // 100
@@ -147,14 +201,26 @@ class HolidayCalculator:
         return date(year, month, day)
 
 
+# Simplify the public interface using the singleton calculator
+_calculator = HolidayCalculator()
+
+
 def get_holiday_weekday(holiday: Holiday, year: int) -> str:
-    """Get the weekday name for any holiday in a given year."""
-    return HolidayCalculator().get_holiday_weekday(holiday, year)
+    """Get the weekday name for any holiday in a given year.
+
+    Args:
+        holiday: The holiday to query
+        year: The year to check
+
+    Returns:
+        str: Name of the weekday (e.g., "Monday")
+    """
+    return _calculator.get_holiday_weekday(holiday, year)
 
 
 def get_holiday_date(holiday: Holiday, year: int) -> str:
     """Get the ISO formatted date for any holiday in a given year."""
-    return HolidayCalculator().get_holiday_date(holiday, year).isoformat()
+    return _calculator.get_holiday_date(holiday, year).isoformat()
 
 
 def new_years_day(year: int) -> str:
