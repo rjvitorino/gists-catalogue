@@ -1,8 +1,8 @@
 requests==2.32.3
-ruff==0.9.4
+ruff==0.9.5
 pytest==8.3.4
 pip-tools==7.4.1
-coverage==7.6.10
+coverage==7.6.11
 pandas==2.2.3
 tabulate==0.9.0
 isort==6.0.0
