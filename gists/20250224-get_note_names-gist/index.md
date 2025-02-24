@@ -2,7 +2,7 @@
 
 **Gist file**: [https://gist.github.com/rjvitorino/a7cf16bf2ffc9b4bc3dd0fad1232f9b0](https://gist.github.com/rjvitorino/a7cf16bf2ffc9b4bc3dd0fad1232f9b0)
 
-**Description**: Cassidy's interview question of the week: a function that, a function that, given a list of frequencies (in Hz), determines the closest musical note for each frequency based on the A440 pitch standard, indicating if the note is flat or sharp
+**Description**: Cassidy's interview question of the week: a function that, given a list of frequencies (in Hz), determines the closest musical note for each frequency based on the A440 pitch standard, indicating if the note is flat or sharp
 
 ## get_note_names.py
 
