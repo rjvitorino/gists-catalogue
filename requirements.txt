@@ -20,7 +20,7 @@ idna==3.7
     # via requests
 iniconfig==2.0.0
     # via pytest
-isort==6.0.0
+isort==6.0.1
     # via -r requirements.in
 numpy==2.0.0
     # via pandas
@@ -38,7 +38,7 @@ pyproject-hooks==1.1.0
     # via
     #   build
     #   pip-tools
-pytest==8.3.4
+pytest==8.3.5
     # via -r requirements.in
 python-dateutil==2.9.0.post0
     # via pandas
@@ -46,7 +46,7 @@ pytz==2024.1
     # via pandas
 requests==2.32.3
     # via -r requirements.in
-ruff==0.9.7
+ruff==0.9.9
     # via -r requirements.in
 six==1.16.0
     # via python-dateutil
