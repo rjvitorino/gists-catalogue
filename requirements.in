@@ -1,4 +1,4 @@
-requests==2.32.3
+requests==2.32.4
 ruff==0.9.10
 pytest==8.3.5
 pip-tools==7.4.1
