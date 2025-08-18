@@ -12,7 +12,7 @@ charset-normalizer==3.3.2
     # via requests
 click==8.1.7
     # via pip-tools
-coverage==7.10.2
+coverage==7.10.4
     # via -r requirements.in
 exceptiongroup==1.2.1
     # via pytest
@@ -48,7 +48,7 @@ pytz==2024.1
     # via pandas
 requests==2.32.4
     # via -r requirements.in
-ruff==0.12.7
+ruff==0.12.9
     # via -r requirements.in
 six==1.16.0
     # via python-dateutil
