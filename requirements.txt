@@ -16,7 +16,7 @@ coverage==7.13.4
     # via -r requirements.in
 exceptiongroup==1.2.1
     # via pytest
-idna==3.7
+idna==3.15
     # via requests
 iniconfig==2.0.0
     # via pytest
